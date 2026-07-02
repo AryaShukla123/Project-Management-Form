@@ -1,0 +1,5 @@
+# Hide the actual token config
+js/config.js
+
+# Hide NetBeans private configuration data
+nbproject/private/

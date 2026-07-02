@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Register &mdash; COLLEGE-DB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="register-page">
+        <div class="ledger-card">
+
+            <div class="window-chrome">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-amber"></span>
+                <span class="dot dot-green"></span>
+                <span class="window-title">project_register.db</span>
+            </div>
+
+            <div class="ledger-header">
+                <div class="ledger-header-text">
+                    <span class="eyebrow">college-db :: project-table</span>
+                    <h1>Project Register</h1>
+                </div>
+                <div id="statusStamp" class="status-stamp stamp-new"><span class="stamp-dot"></span>NEW_ENTRY</div>
+            </div>
+
+            <form id="projectForm" autocomplete="off">
+
+                <div class="field-row">
+                    <label for="projectId">Project ID</label>
+                    <input type="text" id="projectId" class="ledger-input mono" placeholder="e.g. PRJ-2026-001" onchange="getProject()">
+                </div>
+
+                <div class="rule"></div>
+
+                <div class="field-row">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" class="ledger-input" placeholder="Title of the project">
+                </div>
+
+                <div class="field-row">
+                    <label for="assignedTo">Assigned To</label>
+                    <input type="text" id="assignedTo" class="ledger-input" placeholder="Student / team name">
+                </div>
+
+                <div class="field-row two-col">
+                    <div>
+                        <label for="assignmentDate">Assignment Date</label>
+                        <input type="date" id="assignmentDate" class="ledger-input mono">
+                    </div>
+                    <div>
+                        <label for="deadline">Deadline</label>
+                        <input type="date" id="deadline" class="ledger-input mono">
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="button" id="save" class="btn-ledger btn-save" onclick="saveData()" disabled>Save</button>
+                    <button type="button" id="update" class="btn-ledger btn-update" onclick="updateData()" disabled>Update</button>
+                    <button type="button" id="reset" class="btn-ledger btn-reset" onclick="resetData()" disabled>Reset</button>
+                </div>
+
+            </form>
+
+            <p class="ledger-footnote">Project ID is the primary key &mdash; enter it first to check whether the record already exists on file.</p>
+        </div>
+    </div>
+
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+    <script src="js/config.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

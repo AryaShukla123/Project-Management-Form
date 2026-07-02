@@ -1,0 +1,5 @@
+const CONFIG = {
+    CONNECTION_TOKEN: "YOUR_TOKEN_HERE"
+};
+
+
