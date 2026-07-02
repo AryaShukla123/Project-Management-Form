@@ -1,4 +1,4 @@
-var connToken = "CONFIG.CONNECTION_TOKEN";
+var connToken = CONFIG.CONNECTION_TOKEN;
 var dbName = "COLLEGE-DB";
 var relName = "PROJECT-TABLE";
 
